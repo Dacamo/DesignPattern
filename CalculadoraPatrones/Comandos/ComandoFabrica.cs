@@ -28,6 +28,10 @@ namespace CalculadoraPatrones.Comandos
                         return new ComandoEntero(valorDouble, calculadoraDoubles) as ComandoBase<T>;
                     case Operacion.comparar:
                         return new ComandoComparar(valorDouble, calculadoraDoubles) as ComandoBase<T>;
+                    case Operacion.raiz:
+                        return new ComandoRaiz(valorDouble, calculadoraDoubles) as ComandoBase<T>;
+                    case Operacion.potencia:
+                        return new ComandoPotencia(valorDouble, calculadoraDoubles) as ComandoBase<T>;
                     default:
                         throw new Exception("Operacion desconocida");
                 }

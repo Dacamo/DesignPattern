@@ -18,12 +18,6 @@ namespace CalculadoraPatrones.Comandos
             Calculadora.Actualizar(resultado);
         }
 
-        public override void Deshacer()
-        {
-            var resultado = new KeyValuePair<int, int>(
-                Calculadora.Resultado.Key * Valor.Value,
-                Calculadora.Resultado.Value * Valor.Key);
-            Calculadora.Actualizar(resultado);
-        }
+        
     }
 }

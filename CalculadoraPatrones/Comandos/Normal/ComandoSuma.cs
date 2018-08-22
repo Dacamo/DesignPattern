@@ -10,10 +10,7 @@ namespace CalculadoraPatrones.Comandos
         {
         }
 
-        public override void Deshacer()
-        {
-            Calculadora.Actualizar(Calculadora.Resultado - Valor);
-        }
+        
 
         public override void Ejecutar()
         {

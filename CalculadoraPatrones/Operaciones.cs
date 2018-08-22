@@ -11,6 +11,8 @@ namespace CalculadoraPatrones
         Multiplicacion,
         Division,
         entero, 
-        comparar
+        comparar,
+        raiz,
+        potencia
     }
 }

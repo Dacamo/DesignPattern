@@ -10,10 +10,7 @@ namespace CalculadoraPatrones.Comandos
         {
         }
 
-        public override void Deshacer()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public override void Ejecutar()
         {

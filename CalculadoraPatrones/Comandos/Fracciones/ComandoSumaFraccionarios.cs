@@ -11,19 +11,6 @@ namespace CalculadoraPatrones.Comandos
         {
         }
 
-        public override void Deshacer()
-        {
-            var mcd = MathExtended.MinimoComunMultiplo(
-                Calculadora.Resultado.Value,
-                Valor.Value);
-
-            var resultado = new KeyValuePair<int, int>(
-                Calculadora.Resultado.Key * mcd / Calculadora.Resultado.Value - Valor.Key * mcd / Valor.Value,
-                mcd);
-
-            Calculadora.Actualizar(resultado);
-        }
-
         public override void Ejecutar()
         {
             var mcd = MathExtended.MinimoComunMultiplo(

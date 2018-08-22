@@ -15,7 +15,7 @@ namespace CalculadoraPatrones
 
         public abstract void Ejecutar();
 
-        public abstract void Deshacer();
+        
 
         public ComandoBase(T valor, Calculadora<T> calculadora)
         {

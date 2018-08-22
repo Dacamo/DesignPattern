@@ -21,6 +21,7 @@ namespace CalculadoraPatrones.Datos
                 command.Parameters.AddWithValue("contrasena", entidad.Contrasena);
                 SqlDataAdapter sda = new SqlDataAdapter(command);
                 int filasAfectadas = command.ExecuteNonQuery();
+                Console.WriteLine("Registro Exitoso");
             }
             else {
                 Console.WriteLine("Ya existe este usuario");
@@ -38,6 +39,7 @@ namespace CalculadoraPatrones.Datos
             if (dt.Rows.Count == 1)
 
             {
+                Console.WriteLine("Ingreso Correcto");
                 return true;
             }
             else
