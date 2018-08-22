@@ -10,6 +10,7 @@ namespace CalculadoraPatrones
         Resta,
         Multiplicacion,
         Division,
-        entero
+        entero, 
+        comparar
     }
 }

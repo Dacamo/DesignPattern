@@ -39,17 +39,25 @@ namespace CalculadoraPatrones
             //Sumar, restar dos numeros
             invokerCalculadora.Ejecutar(Operacion.Suma, 1220);
             invokerCalculadora.Ejecutar(Operacion.Suma, 100);
-            Console.WriteLine(invokerCalculadora.Calculadora.Resultado);
-            invokerCalculadora.Ejecutar(Operacion.Resta, 100);
+            Console.WriteLine("Suma-> (0+1220 +100) = " + invokerCalculadora.Calculadora.Resultado);
+            invokerCalculadora.Calculadora.Actualizar(0);
+            invokerCalculadora.Ejecutar(Operacion.Suma, 2000);
             invokerCalculadora.Ejecutar(Operacion.Resta, 1000);
-            Console.WriteLine(invokerCalculadora.Calculadora.Resultado);
+            Console.WriteLine("Resta-> (0+2000-1000) = " + invokerCalculadora.Calculadora.Resultado);
 
             //probar numero es entero
             invokerCalculadora.Ejecutar(Operacion.entero, 3250);
-            Console.WriteLine(invokerCalculadora.Calculadora.Resultado);
+            Console.WriteLine("Entero = 0, No entero 1 = "+ 3250 + " es = " + invokerCalculadora.Calculadora.Resultado);
             
             //probar numero no es entero
             invokerCalculadora.Ejecutar(Operacion.entero, 1.51);
+            Console.WriteLine("Entero = 0, No entero 1 = " + 1.51 + " es = " + invokerCalculadora.Calculadora.Resultado);
+
+
+
+            //comparar numeros "se compara 2 con el 100"
+            invokerCalculadora.Calculadora.Actualizar(100);
+            invokerCalculadora.Ejecutar(Operacion.comparar, 2);
             Console.WriteLine(invokerCalculadora.Calculadora.Resultado);
 
             //calculadora de fracciones

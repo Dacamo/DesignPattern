@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CalculadoraPatrones.Comandos.Normal;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -25,6 +26,8 @@ namespace CalculadoraPatrones.Comandos
                         return new ComandoDivision(valorDouble, calculadoraDoubles) as ComandoBase<T>;
                     case Operacion.entero:
                         return new ComandoEntero(valorDouble, calculadoraDoubles) as ComandoBase<T>;
+                    case Operacion.comparar:
+                        return new ComandoComparar(valorDouble, calculadoraDoubles) as ComandoBase<T>;
                     default:
                         throw new Exception("Operacion desconocida");
                 }
